@@ -1,0 +1,20 @@
+/* src/pages/RecipeListPage.css */
+
+.recipe-list-page {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.recipe-list-page h1 {
+    margin-bottom: 30px;
+}
+
+.recipes-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

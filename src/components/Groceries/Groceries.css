@@ -1,0 +1,82 @@
+/* src/components/Groceries/Groceries.css */
+
+.groceries-container {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.groceries-button {
+    position: relative;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.groceries-button:hover {
+    background-color: #0056b3;
+}
+
+.groceries-list {
+    margin-top: 20px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.groceries-list ul {
+    list-style: none;
+    padding: 0;
+}
+
+.groceries-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.groceries-image {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.available-groceries {
+    margin-top: 30px;
+}
+
+.items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.item-card {
+    width: 100px;
+    padding: 10px;
+    background-color: #ffffff;
+    border: 2px solid #007bff;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.item-card:hover {
+    transform: scale(1.05);
+    background-color: #e7f3ff;
+}
+
+.item-image {
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}

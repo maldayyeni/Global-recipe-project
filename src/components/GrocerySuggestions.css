@@ -1,0 +1,81 @@
+/* src/components/GrocerySuggestions.css */
+
+.grocery-suggestions-container {
+    padding: 20px;
+    background-color: #f1f1f1;
+    min-height: 80vh;
+}
+
+.grocery-suggestions-container h2 {
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.grocery-items-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.grocery-item-card {
+    width: 150px;
+    padding: 15px;
+    background-color: #ffffff;
+    border: 2px solid #17a2b8;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.grocery-item-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 8px rgba(0,0,0,0.15);
+}
+
+.grocery-item-image {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.grocery-item-name {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+    color: #555;
+}
+
+.grocery-item-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.add-button, .remove-button {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    color: white;
+}
+
+.add-button {
+    background-color: #28a745;
+}
+
+.add-button:hover {
+    background-color: #218838;
+}
+
+.remove-button {
+    background-color: #dc3545;
+}
+
+.remove-button:hover {
+    background-color: #c82333;
+}
