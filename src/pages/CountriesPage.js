@@ -16,7 +16,13 @@ const countries = [
         dishImage: 'https://images.unsplash.com/photo-1600628422011-9d8dfb1d2c4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
         famousDish: 'Butter Chicken',
     },
-    // Add more countries here...
+    {
+        id: 3,
+        name: 'Japan',
+        flag: 'https://flagcdn.com/w320/jp.png',
+        dishImage: 'https://images.unsplash.com/photo-1562967916-eb82221dfb36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
+        famousDish: 'Sushi',
+    },
 ];
 
 function CountriesPage({ onSelectCountry }) {
@@ -28,7 +34,7 @@ function CountriesPage({ onSelectCountry }) {
 
     return (
         <div className="countries-page">
-            <h2>Explore Recipes by Country</h2>
+            <h2>Select a Country</h2>
             <input
                 type="text"
                 placeholder="Search for a country..."
