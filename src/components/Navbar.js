@@ -1,16 +1,25 @@
+// src/components/Navbar.js
 import React from "react";
-import { Link } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import "./Navbar.css";
 
 function Navbar() {
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const handleBack = () => {
+        navigate(-1); // Go back to the previous page
+    };
+
     return (
-        <nav className="navbar">
+        <div className="navbar">
+            {location.pathname !== "/" && ( // Show back button only if not on the first page
+                <button className="back-button" onClick={handleBack}>
+                    ← Back
+                </button>
+            )}
             <h1>Global Recipes</h1>
-            <div className="links">
-                <Link to="/">Home</Link>
-                <Link to="/favorites">Favorites</Link>
-            </div>
-        </nav>
+        </div>
     );
 }
 
