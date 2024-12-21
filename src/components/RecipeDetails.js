@@ -2,6 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import recipesData from "../data/recipesData";
 import "./RecipeDetails.css";
+import BackButton from "../components/BackButton"; // Import BackButton
 
 function RecipeDetails() {
     const { recipeName } = useParams();
@@ -13,6 +14,7 @@ function RecipeDetails() {
 
     return (
         <div className="recipe-details">
+            <BackButton /> {/* Add Back Button */}
             <h2>{recipe.name}</h2>
             <img src={recipe.image} alt={recipe.name} />
             <h3>Ingredients:</h3>

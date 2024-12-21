@@ -2,10 +2,12 @@ import React from "react";
 import countriesData from "../data/countriesData";
 import "./CountriesPage.css";
 import { Link } from "react-router-dom";
+import BackButton from "../components/BackButton"; // Import BackButton
 
 function CountriesPage() {
     return (
         <div className="countries-page">
+            <BackButton /> {/* Add Back Button */}
             <h2>Select a Country</h2>
             <div className="countries-grid">
                 {countriesData.map((country) => (

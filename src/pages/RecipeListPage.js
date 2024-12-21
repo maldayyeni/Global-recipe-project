@@ -1,6 +1,7 @@
 import React from "react";
 import { useParams, Link } from "react-router-dom";
 import recipesData from "../data/recipesData";
+import BackButton from "../components/BackButton"; // Import the BackButton component
 import "./RecipeListPage.css";
 
 function RecipeListPage() {
@@ -9,6 +10,7 @@ function RecipeListPage() {
 
     return (
         <div className="recipe-list-page">
+            <BackButton /> {/* Add the Back Button */}
             <h2>{country} Recipes</h2>
             <div className="recipe-grid">
                 {recipes.map((recipe) => (
