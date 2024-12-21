@@ -1,77 +1,97 @@
-// src/data/countriesData.js
-
 const countriesData = [
     {
-        id: 1,
-        name: 'Italy',
-        representativeFood: 'Pizza',
-        foodImage: 'https://images.unsplash.com/photo-1601924582975-0f7e2983ab9c?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/it.png',
+      name: "Italy",
+      image: "https://images.unsplash.com/photo-1561043433-aaf687c4cf4e",
     },
     {
-        id: 2,
-        name: 'Japan',
-        representativeFood: 'Sushi',
-        foodImage: 'https://images.unsplash.com/photo-1553621042-f6e147245754?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/jp.png',
+      name: "India",
+      image: "https://images.unsplash.com/photo-1589308078051-944f5f2f102c",
     },
     {
-        id: 3,
-        name: 'Mexico',
-        representativeFood: 'Tacos',
-        foodImage: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/mx.png',
+      name: "Japan",
+      image: "https://images.unsplash.com/photo-1584191123938-c5f1b4dcf47e",
     },
     {
-        id: 4,
-        name: 'France',
-        representativeFood: 'Croissant',
-        foodImage: 'https://images.unsplash.com/photo-1548365328-5f6d7c7c1f0d?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/fr.png',
+      name: "Mexico",
+      image: "https://images.unsplash.com/photo-1514516875074-1be722447ea8",
     },
     {
-        id: 5,
-        name: 'India',
-        representativeFood: 'Butter Chicken',
-        foodImage: 'https://images.unsplash.com/photo-1604908177524-63b3c3b4c41c?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/in.png',
+      name: "Ireland",
+      image: "https://images.unsplash.com/photo-1511765224389-37f0e77cf0eb",
     },
     {
-        id: 6,
-        name: 'China',
-        representativeFood: 'Dumplings',
-        foodImage: 'https://images.unsplash.com/photo-1589302168068-964664d93dc0?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/cn.png',
+      name: "Scotland",
+      image: "https://images.unsplash.com/photo-1584680755536-d53902fb3dff",
     },
     {
-        id: 7,
-        name: 'Spain',
-        representativeFood: 'Paella',
-        foodImage: 'https://images.unsplash.com/photo-1576795620014-32046bdfac3d?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/es.png',
+      name: "England",
+      image: "https://images.unsplash.com/photo-1571513770565-f117319bd75d",
     },
     {
-        id: 8,
-        name: 'Thailand',
-        representativeFood: 'Pad Thai',
-        foodImage: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/th.png',
+      name: "France",
+      image: "https://images.unsplash.com/photo-1518780664697-55e3ad937233",
     },
     {
-        id: 9,
-        name: 'Greece',
-        representativeFood: 'Moussaka',
-        foodImage: 'https://images.unsplash.com/photo-1600891964599-f61ba0e24092?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/gr.png',
+      name: "Germany",
+      image: "https://images.unsplash.com/photo-1599599811669-5d846c1415cb",
     },
     {
-        id: 10,
-        name: 'Lebanon',
-        representativeFood: 'Hummus',
-        foodImage: 'https://images.unsplash.com/photo-1598514982304-5af3b2ad3e5e?auto=format&fit=crop&w=400&q=80',
-        flag: 'https://flagcdn.com/w320/lb.png',
+      name: "Portugal",
+      image: "https://images.unsplash.com/photo-1614850528586-c8ddbd3c5cd7",
     },
-    // Add more countries as needed
-];
-
-export default countriesData;
+    {
+      name: "Spain",
+      image: "https://images.unsplash.com/photo-1559847844-5315695f6aa7",
+    },
+    {
+      name: "Greece",
+      image: "https://images.unsplash.com/photo-1580620898018-2a52bb472b98",
+    },
+    {
+      name: "Denmark",
+      image: "https://images.unsplash.com/photo-1569058246595-2ba60b1e93a8",
+    },
+    {
+      name: "Poland",
+      image: "https://images.unsplash.com/photo-1597596076433-447c84f7c854",
+    },
+    {
+      name: "Brazil",
+      image: "https://images.unsplash.com/photo-1504544750208-dc0358e63f7f",
+    },
+    {
+      name: "Argentina",
+      image: "https://images.unsplash.com/photo-1517737224473-58b0b121d9c5",
+    },
+    {
+      name: "Australia",
+      image: "https://images.unsplash.com/photo-1518553059729-a2739b38a004",
+    },
+    {
+      name: "Nigeria",
+      image: "https://images.unsplash.com/photo-1603651476200-f8369d2c6a5c",
+    },
+    {
+      name: "China",
+      image: "https://images.unsplash.com/photo-1598514982578-1a6abf1d47c3",
+    },
+    {
+      name: "Philippines",
+      image: "https://images.unsplash.com/photo-1606490911544-3295b69e3b9d",
+    },
+    {
+      name: "Thailand",
+      image: "https://images.unsplash.com/photo-1536305030461-d7a1e4503a95",
+    },
+    {
+      name: "Morocco",
+      image: "https://images.unsplash.com/photo-1506748686214-e9df14d4d9d0",
+    },
+    {
+      name: "Lebanon",
+      image: "https://images.unsplash.com/photo-1576402187871-df30a7c7a4b6",
+    },
+  ];
+  
+  export default countriesData;
+  

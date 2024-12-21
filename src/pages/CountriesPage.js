@@ -1,32 +1,31 @@
+// src/pages/CountriesPage.js
 import React, { useState } from 'react';
 import './CountriesPage.css';
 
 const countries = [
     {
-        id: 1,
-        name: 'Italy',
-        flag: 'https://flagcdn.com/w320/it.png',
-        dishImage: 'https://images.unsplash.com/photo-1604908177520-472e9a7b7c8b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
-        famousDish: 'Pizza',
+        name: "Italy",
+        flag: "https://flagcdn.com/w320/it.png",
+        dishImage: "https://images.unsplash.com/photo-1604908177520-472e9a7b7c8b",
+        dishName: "Pizza",
     },
     {
-        id: 2,
-        name: 'India',
-        flag: 'https://flagcdn.com/w320/in.png',
-        dishImage: 'https://images.unsplash.com/photo-1600628422011-9d8dfb1d2c4b?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
-        famousDish: 'Butter Chicken',
+        name: "India",
+        flag: "https://flagcdn.com/w320/in.png",
+        dishImage: "https://images.unsplash.com/photo-1627332385566-9e6d56c76cd8",
+        dishName: "Butter Chicken",
     },
     {
-        id: 3,
-        name: 'Japan',
-        flag: 'https://flagcdn.com/w320/jp.png',
-        dishImage: 'https://images.unsplash.com/photo-1562967916-eb82221dfb36?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=400',
-        famousDish: 'Sushi',
+        name: "Japan",
+        flag: "https://flagcdn.com/w320/jp.png",
+        dishImage: "https://images.unsplash.com/photo-1562967916-eb82221dfb36",
+        dishName: "Sushi",
     },
+    // Add more countries here
 ];
 
 function CountriesPage({ onSelectCountry }) {
-    const [searchTerm, setSearchTerm] = useState('');
+    const [searchTerm, setSearchTerm] = useState("");
 
     const filteredCountries = countries.filter((country) =>
         country.name.toLowerCase().includes(searchTerm.toLowerCase())
@@ -45,15 +44,14 @@ function CountriesPage({ onSelectCountry }) {
             <div className="countries-list">
                 {filteredCountries.map((country) => (
                     <div
-                        key={country.id}
+                        key={country.name}
                         className="country-card"
                         onClick={() => onSelectCountry(country.name)}
                     >
-                        <img src={country.dishImage} alt={country.famousDish} className="dish-image" />
-                        <div className="country-info">
-                            <h3>{country.name}</h3>
-                            <p>{country.famousDish}</p>
-                        </div>
+                        <img src={country.flag} alt={`${country.name} flag`} className="country-flag" />
+                        <img src={country.dishImage} alt={country.dishName} className="country-dish" />
+                        <h3>{country.name}</h3>
+                        <p>Famous Dish: {country.dishName}</p>
                     </div>
                 ))}
             </div>

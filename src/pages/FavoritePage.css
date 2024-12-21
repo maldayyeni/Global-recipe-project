@@ -1,0 +1,14 @@
+.favorites-page {
+    padding: 20px;
+    text-align: center;
+    background-color: #1c1c1c;
+    color: #fff;
+  }
+  
+  .favorites-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+  

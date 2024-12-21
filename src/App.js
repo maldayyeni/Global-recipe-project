@@ -1,88 +1,52 @@
-import React, { useState } from 'react';
-import CountriesPage from './pages/CountriesPage';
-import RecipeListPage from './pages/RecipeListPage';
-import RecipeDetails from './components/RecipeDetails';
-import GrocerySuggestions from './components/GrocerySuggestions';
-import ShoppingAssistant from './components/ShoppingAssistant';
-import recipesData from './data/recipesData';
-import './App.css';
+import React, { useState } from "react";
+import Navbar from "./components/Navbar";
+import CountriesPage from "./pages/CountriesPage";
+import RecipeListPage from "./pages/RecipeListPage";
+import RecipeDetails from "./components/RecipeDetails";
+import FavoritesPage from "./pages/FavoritesPage";
+import recipesData from "./data/recipesData";
 
 function App() {
-    const [selectedCountry, setSelectedCountry] = useState(null);
-    const [selectedRecipe, setSelectedRecipe] = useState(null);
-    const [viewGroceries, setViewGroceries] = useState(false);
-    const [viewShopping, setViewShopping] = useState(false);
+  const [currentCountry, setCurrentCountry] = useState(null);
+  const [selectedRecipe, setSelectedRecipe] = useState(null);
+  const [favorites, setFavorites] = useState([]);
 
-    const handleCountrySelect = (country) => {
-        setSelectedCountry(country);
-        setSelectedRecipe(null);
-        window.scrollTo(0, 0); // Fix scrolling issue
-    };
-
-    const handleRecipeSelect = (recipe) => {
-        setSelectedRecipe(recipe);
-        window.scrollTo(0, 0); // Fix scrolling issue
-    };
-
-    const handleBack = () => {
-        if (selectedRecipe) {
-            setSelectedRecipe(null);
-        } else if (viewGroceries) {
-            setViewGroceries(false);
-        } else if (viewShopping) {
-            setViewShopping(false);
-        } else {
-            setSelectedCountry(null);
-        }
-        window.scrollTo(0, 0); // Fix scrolling issue
-    };
-
-    const toggleGroceriesPage = () => {
-        setViewGroceries(!viewGroceries);
-        setViewShopping(false);
-    };
-
-    const toggleShoppingPage = () => {
-        setViewShopping(!viewShopping);
-        setViewGroceries(false);
-    };
-
-    return (
-        <div className="App">
-            {viewShopping ? (
-                <ShoppingAssistant onBack={handleBack} />
-            ) : viewGroceries ? (
-                <GrocerySuggestions onBack={handleBack} />
-            ) : selectedRecipe ? (
-                <RecipeDetails recipe={selectedRecipe} onBack={handleBack} />
-            ) : selectedCountry ? (
-                <RecipeListPage
-                    country={selectedCountry}
-                    recipes={recipesData[selectedCountry] || []}
-                    onBack={handleBack}
-                    onSelectRecipe={handleRecipeSelect}
-                />
-            ) : (
-                <CountriesPage onSelectCountry={handleCountrySelect} />
-            )}
-
-            <div className="navigation-buttons">
-                {!viewGroceries && !viewShopping && !selectedCountry && (
-                    <>
-                        <button onClick={toggleGroceriesPage} className="groceries-button">
-                            🍎 Enter Groceries
-                        </button>
-                        <button onClick={toggleShoppingPage} className="shopping-button" style={{ marginLeft: '10px' }}>
-                            🛒 Shopping Assistant
-                        </button>
-                    </>
-                )}
-                {(viewGroceries || viewShopping || selectedCountry) && (
-                    <button onClick={handleBack} style={{ marginLeft: '10px' }}>Back</button>
-                )}
-            </div>
-        </div>
+  const toggleFavorite = (recipe) => {
+    setFavorites((prevFavorites) =>
+      prevFavorites.some((fav) => fav.name === recipe.name)
+        ? prevFavorites.filter((fav) => fav.name !== recipe.name)
+        : [...prevFavorites, recipe]
     );
+  };
+
+  return (
+    <div className="App">
+      <Navbar onCountrySelect={setCurrentCountry} />
+      {!currentCountry && !selectedRecipe && (
+        <CountriesPage onSelectCountry={setCurrentCountry} />
+      )}
+      {currentCountry && !selectedRecipe && (
+        <RecipeListPage
+          recipes={recipesData[currentCountry]}
+          onRecipeSelect={setSelectedRecipe}
+          onFavoriteToggle={toggleFavorite}
+          favorites={favorites}
+        />
+      )}
+      {selectedRecipe && (
+        <RecipeDetails
+          recipe={selectedRecipe}
+          onBack={() => setSelectedRecipe(null)}
+        />
+      )}
+      {!currentCountry && !selectedRecipe && (
+        <FavoritesPage
+          favorites={favorites}
+          onRecipeSelect={setSelectedRecipe}
+        />
+      )}
+    </div>
+  );
 }
 
 export default App;
