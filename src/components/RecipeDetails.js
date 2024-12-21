@@ -9,21 +9,19 @@ function RecipeDetails({ recipe, onBack }) {
             </button>
             <h1>{recipe.name}</h1>
             <img src={recipe.image} alt={recipe.name} className="recipe-image" />
-            <div className="recipe-info">
-                <h2>Cooking Time: {recipe.time}</h2>
-                <h2>Ingredients</h2>
-                <ul>
-                    {recipe.ingredients.map((ingredient, index) => (
-                        <li key={index}>{ingredient}</li>
-                    ))}
-                </ul>
-                <h2>Instructions</h2>
-                <ol>
-                    {recipe.instructions.map((step, index) => (
-                        <li key={index}>{step}</li>
-                    ))}
-                </ol>
-            </div>
+            <h2>Cooking Time: {recipe.time}</h2>
+            <h2>Ingredients</h2>
+            <ul>
+                {recipe.ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                ))}
+            </ul>
+            <h2>Instructions</h2>
+            <ol>
+                {recipe.instructions.map((step, index) => (
+                    <li key={index}>{step}</li>
+                ))}
+            </ol>
         </div>
     );
 }

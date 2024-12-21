@@ -1,10 +1,9 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import CountriesPage from './pages/CountriesPage';
 import RecipeListPage from './pages/RecipeListPage';
 import RecipeDetails from './components/RecipeDetails';
 import GrocerySuggestions from './components/GrocerySuggestions';
 import ShoppingAssistant from './components/ShoppingAssistant';
-import NotificationDot from './components/NotificationDot/NotificationDot';
 import recipesData from './data/recipesData';
 import './App.css';
 
@@ -13,26 +12,16 @@ function App() {
     const [selectedRecipe, setSelectedRecipe] = useState(null);
     const [viewGroceries, setViewGroceries] = useState(false);
     const [viewShopping, setViewShopping] = useState(false);
-    const [shoppingCount, setShoppingCount] = useState(0);
-    const [showShoppingNotification, setShowShoppingNotification] = useState(false);
-
-    useEffect(() => {
-        const storedShoppingCount = parseInt(localStorage.getItem('shoppingCount')) || 0;
-        setShoppingCount(storedShoppingCount);
-        setShowShoppingNotification(storedShoppingCount > 0);
-    }, []);
-
-    useEffect(() => {
-        localStorage.setItem('shoppingCount', shoppingCount);
-    }, [shoppingCount]);
 
     const handleCountrySelect = (country) => {
         setSelectedCountry(country);
         setSelectedRecipe(null);
+        window.scrollTo(0, 0); // Fix scrolling issue
     };
 
     const handleRecipeSelect = (recipe) => {
         setSelectedRecipe(recipe);
+        window.scrollTo(0, 0); // Fix scrolling issue
     };
 
     const handleBack = () => {
@@ -45,75 +34,27 @@ function App() {
         } else {
             setSelectedCountry(null);
         }
-    };
-
-    const toggleGroceriesPage = () => {
-        setViewGroceries(!viewGroceries);
-        setViewShopping(false);
-    };
-
-    const toggleShoppingPage = () => {
-        setViewShopping(!viewShopping);
-        setViewGroceries(false);
-    };
-
-    const incrementShoppingCount = () => {
-        setShoppingCount((prevCount) => prevCount + 1);
-        setShowShoppingNotification(true);
-    };
-
-    const decrementShoppingCount = () => {
-        setShoppingCount((prevCount) => (prevCount > 0 ? prevCount - 1 : 0));
-        if (shoppingCount - 1 === 0) {
-            setShowShoppingNotification(false);
-        }
-    };
-
-    const handleShoppingNotificationClose = () => {
-        setShowShoppingNotification(false);
+        window.scrollTo(0, 0); // Fix scrolling issue
     };
 
     return (
         <div className="App">
             {viewShopping ? (
-                <ShoppingAssistant
-                    recipes={Object.values(recipesData).flat()}
-                    incrementShoppingCount={incrementShoppingCount}
-                    decrementShoppingCount={decrementShoppingCount}
-                />
+                <ShoppingAssistant onBack={handleBack} />
             ) : viewGroceries ? (
-                <GrocerySuggestions />
+                <GrocerySuggestions onBack={handleBack} />
             ) : selectedRecipe ? (
                 <RecipeDetails recipe={selectedRecipe} onBack={handleBack} />
             ) : selectedCountry ? (
                 <RecipeListPage
-                    recipes={recipesData[selectedCountry]}
+                    country={selectedCountry}
+                    recipes={recipesData[selectedCountry] || []}
+                    onBack={handleBack}
                     onSelectRecipe={handleRecipeSelect}
                 />
             ) : (
-                <CountriesPage
-                    onSelectCountry={handleCountrySelect}
-                />
+                <CountriesPage onSelectCountry={handleCountrySelect} />
             )}
-
-            <div className="navigation-buttons">
-                {!viewGroceries && !viewShopping && !selectedCountry && (
-                    <>
-                        <button onClick={toggleGroceriesPage} className="groceries-button">
-                            🍎 Enter Groceries
-                        </button>
-                        <button onClick={toggleShoppingPage} className="shopping-button" style={{ marginLeft: '10px' }}>
-                            🛒 Shopping Assistant
-                            {showShoppingNotification && (
-                                <NotificationDot count={shoppingCount} onReset={handleShoppingNotificationClose} />
-                            )}
-                        </button>
-                    </>
-                )}
-                {(viewGroceries || viewShopping || selectedCountry) && (
-                    <button onClick={handleBack} style={{ marginLeft: '10px' }}>Back</button>
-                )}
-            </div>
         </div>
     );
 }

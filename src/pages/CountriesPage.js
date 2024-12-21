@@ -38,9 +38,9 @@ function CountriesPage({ onSelectCountry }) {
             <input
                 type="text"
                 placeholder="Search for a country..."
+                className="search-bar"
                 value={searchTerm}
                 onChange={(e) => setSearchTerm(e.target.value)}
-                className="search-bar"
             />
             <div className="countries-list">
                 {filteredCountries.map((country) => (
