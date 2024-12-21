@@ -1,18 +1,17 @@
-// src/components/NavBar/NavBar.js
+import React from "react";
+import { Link } from "react-router-dom";
+import "./Navbar.css";
 
-import React from 'react';
-import './NavBar.css';
-
-function NavBar() {
+function Navbar() {
     return (
         <nav className="navbar">
-            <h1>Global Recipe App</h1>
-            <div className="nav-links">
-                <a href="/">Home</a>
-                <a href="/recipes">Recipes</a>
+            <h1>Global Recipes</h1>
+            <div className="links">
+                <Link to="/">Home</Link>
+                <Link to="/favorites">Favorites</Link>
             </div>
         </nav>
     );
 }
 
-export default NavBar;
+export default Navbar;

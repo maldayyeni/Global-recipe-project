@@ -1,28 +1,9 @@
 .recipe-list-page {
     padding: 20px;
-    background-color: #1c1c1c;
-    color: #fff;
-  }
-  
-  .page-title {
-    text-align: center;
-    color: #00ffb3;
-  }
-  
-  .search-bar {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 20px;
-    border: 2px solid #00aaff;
-    border-radius: 5px;
-    background-color: #333;
-    color: #fff;
-  }
-  
-  .recipe-list {
-    display: flex;
-    flex-wrap: wrap;
+}
+
+.recipe-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
     gap: 20px;
-    justify-content: center;
-  }
-  
+}
