@@ -1,20 +1,88 @@
-/* src/pages/RecipeListPage.css */
+/* src/pages/CountriesPage.css */
 
-.recipe-list-page {
-    background-color: #222;
-    color: white;
+.countries-page {
+    text-align: center;
     padding: 20px;
-    min-height: 100vh;
+    background-color: #121212; /* Dark background */
+    color: #ffffff; /* White text */
+}
+
+.countries-page h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+.search-bar {
+    width: 80%;
+    max-width: 400px;
+    padding: 12px 20px;
+    margin-bottom: 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    outline: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    background-color: #1e1e1e;
+    color: #ffffff;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.search-bar::placeholder {
+    color: #b3b3b3;
+}
+
+.countries-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.country-card {
+    background-color: #1e1e1e;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    width: 250px;
     text-align: center;
 }
 
-.recipe-list-page h1 {
-    margin-bottom: 30px;
+.country-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
 }
 
-.recipes-grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
+.flag-container {
+    margin-bottom: 10px;
+}
+
+.flag {
+    width: 40px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.dish-container {
+    margin-bottom: 15px;
+}
+
+.dish-image {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.country-card h3 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+.country-card p {
+    font-size: 14px;
+    color: #b3b3b3;
 }

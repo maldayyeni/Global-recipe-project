@@ -3,13 +3,21 @@
 import React from 'react';
 import './NotificationDot.css';
 
-function NotificationDot({ count, onClose }) {
+function NotificationDot({ count, onReset }) {
     if (count === 0) return null;
 
     return (
-        <div className="notification-dot">
-            <span className="count">{count}</span>
-            <button className="close-button" onClick={onClose}>×</button>
+        <div className="notification-container">
+            <div className="count-badge">{count}</div>
+            <button
+                className="reset-button"
+                onClick={(e) => {
+                    e.stopPropagation(); // Prevent triggering the parent onClick
+                    onReset();
+                }}
+            >
+                ×
+            </button>
         </div>
     );
 }

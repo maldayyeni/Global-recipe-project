@@ -1,38 +1,42 @@
 /* src/components/NotificationDot/NotificationDot.css */
 
-.notification-dot {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: red;
+.notification-container {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 24px;
+    height: 24px;
+}
+
+.count-badge {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #ff4d4d; /* Bright red */
     color: white;
     border-radius: 50%;
-    padding: 10px 15px;
-    font-size: 16px;
-    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    font-size: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    animation: fadeIn 0.3s ease-in-out;
-    z-index: 1000;
 }
 
-@keyframes fadeIn {
-    from { opacity: 0; transform: scale(0.8); }
-    to { opacity: 1; transform: scale(1); }
-}
-
-.count {
-    margin-right: 8px;
-}
-
-.close-button {
-    background: none;
-    border: none;
+.reset-button {
+    position: absolute;
+    top: -6px;
+    right: -6px;
+    background-color: #ff4d4d; /* Bright red */
     color: white;
-    font-size: 18px;
+    border: none;
+    border-radius: 50%;
+    width: 16px;
+    height: 16px;
+    font-size: 12px;
     cursor: pointer;
-    line-height: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 0;
 }
