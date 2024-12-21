@@ -1,153 +1,147 @@
-// src/data/countriesData.js
-
 const countriesData = [
     {
         name: "Italy",
-        image: "https://images.unsplash.com/photo-1528337843773-ccfabbba6cf0",
+        image: "https://images.unsplash.com/photo-1504674900247-0877df9cc836", // Example pizza image
     },
     {
         name: "India",
-        image: "https://images.unsplash.com/photo-1554797589-7241bb691973",
+        image: "https://images.unsplash.com/photo-1586201375761-83865001b3d0", // Example Indian spices image
     },
     {
         name: "Japan",
-        image: "https://images.unsplash.com/photo-1571987937746-5134c43d05a7",
+        image: "https://images.unsplash.com/photo-1541696432-82c6da8ce7bf", // Example sushi image
     },
     {
         name: "Mexico",
-        image: "https://images.unsplash.com/photo-1586190848861-99aa4a171e90",
+        image: "https://images.unsplash.com/photo-1570872625561-b82cd7a3a3ee", // Example tacos image
     },
     {
         name: "Ireland",
-        image: "https://images.unsplash.com/photo-1583336661565-cb8dc1d7cdd6",
+        image: "https://images.unsplash.com/photo-1596953043782-f20f6be64714", // Example Irish countryside
     },
     {
         name: "Scotland",
-        image: "https://images.unsplash.com/photo-1573246937612-47a1410be7a6",
+        image: "https://images.unsplash.com/photo-1605902711622-cfb43c443425", // Example Scottish landscape
     },
     {
         name: "England",
-        image: "https://images.unsplash.com/photo-1594136070276-ec7dc7c6b07f",
+        image: "https://images.unsplash.com/photo-1566203545145-84c17b0d4b5f", // Example English tea setup
     },
     {
         name: "Germany",
-        image: "https://images.unsplash.com/photo-1502775524894-7d3b0b19e4e8",
+        image: "https://images.unsplash.com/photo-1553531580-c5dc97fef7e0", // Example German sausages
     },
     {
         name: "France",
-        image: "https://images.unsplash.com/photo-1584863115121-fc91e6845b4f",
+        image: "https://images.unsplash.com/photo-1566848438730-891b23e9e9c4", // Example French pastries
     },
     {
         name: "Denmark",
-        image: "https://images.unsplash.com/photo-1528756503491-76634a206d5a",
+        image: "https://images.unsplash.com/photo-1558111105-9e252d97a361", // Example Danish pastries
     },
     {
         name: "Spain",
-        image: "https://images.unsplash.com/photo-1528759237780-9f73e16a13b3",
+        image: "https://images.unsplash.com/photo-1546069901-ba9599a7e63c", // Example Spanish paella
     },
     {
         name: "Portugal",
-        image: "https://images.unsplash.com/photo-1613474864502-7d5b7310c251",
+        image: "https://images.unsplash.com/photo-1572451476413-0d42eb2c51f8", // Example Portuguese cuisine
     },
     {
         name: "Greece",
-        image: "https://images.unsplash.com/photo-1556787364-46ea37d9b6c7",
+        image: "https://images.unsplash.com/photo-1578926378942-b911b2cc2b1f", // Example Greek salad
     },
     {
         name: "Austria",
-        image: "https://images.unsplash.com/photo-1600431524410-5a367ea5bb0e",
+        image: "https://images.unsplash.com/photo-1560807707-8cc77767d783", // Example Austrian Alps
     },
     {
         name: "Poland",
-        image: "https://images.unsplash.com/photo-1598454442545-1a84dbd02ff5",
+        image: "https://images.unsplash.com/photo-1554118811-1e7d4cda99bc", // Example Polish pierogi
     },
     {
         name: "Russia",
-        image: "https://images.unsplash.com/photo-1595171953175-5ebc1e16c322",
+        image: "https://images.unsplash.com/photo-1562599937-0b7db85d0c44", // Example Russian soup
     },
     {
         name: "Nigeria",
-        image: "https://images.unsplash.com/photo-1545116715-8e4043b6f026",
+        image: "https://images.unsplash.com/photo-1612277794005-b9f8ff82162c", // Example Nigerian jollof rice
     },
     {
         name: "South Africa",
-        image: "https://images.unsplash.com/photo-1580936066067-c72159c0e9b4",
+        image: "https://images.unsplash.com/photo-1601758123928-3c9f3103d6b4", // Example South African braai
     },
     {
         name: "Israel",
-        image: "https://images.unsplash.com/photo-1522184218100-d2ff9f6a132d",
+        image: "https://images.unsplash.com/photo-1562617567-9cb97f6cf66b", // Example Israeli hummus
     },
     {
         name: "Lebanon",
-        image: "https://images.unsplash.com/photo-1542281286-9e0a16bb7366",
+        image: "https://images.unsplash.com/photo-1617196031926-85c59b62ac88", // Example Lebanese tabbouleh
     },
     {
         name: "Armenia",
-        image: "https://images.unsplash.com/photo-1624101126706-9c7b6d3550a7",
+        image: "https://images.unsplash.com/photo-1612197593585-175d5a1dcf13", // Example Armenian lavash
     },
     {
         name: "New Zealand",
-        image: "https://images.unsplash.com/photo-1579715804288-bc9c2b2f76b2",
+        image: "https://images.unsplash.com/photo-1519046900508-798ebc28c687", // Example New Zealand landscape
     },
     {
         name: "Hungary",
-        image: "https://images.unsplash.com/photo-1569078448344-8f87ddee4f74",
+        image: "https://images.unsplash.com/photo-1628594405845-452fa6ad9de2", // Example Hungarian goulash
     },
     {
         name: "China",
-        image: "https://images.unsplash.com/photo-1510130387422-82bed34baf0e",
+        image: "https://images.unsplash.com/photo-1546410531-bb4caa6b424d", // Example Chinese dumplings
     },
     {
         name: "Philippines",
-        image: "https://images.unsplash.com/photo-1552352628-8a8c2e9a4e0e",
+        image: "https://images.unsplash.com/photo-1609842770295-c6a720fc24f3", // Example Filipino adobo
     },
     {
         name: "Malaysia",
-        image: "https://images.unsplash.com/photo-1617881690081-fdd546db62f6",
+        image: "https://images.unsplash.com/photo-1553010194-1192491a2219", // Example Malaysian laksa
     },
     {
         name: "Thailand",
-        image: "https://images.unsplash.com/photo-1512621776951-a57141f2eefd",
+        image: "https://images.unsplash.com/photo-1569058244411-03c5bcd470b8", // Example Thai curry
     },
     {
         name: "South Korea",
-        image: "https://images.unsplash.com/photo-1575008574005-2e1e6b11c5bd",
+        image: "https://images.unsplash.com/photo-1587183691668-35a75f6350eb", // Example Korean kimchi
     },
     {
         name: "Argentina",
-        image: "https://images.unsplash.com/photo-1506086679526-1b9d3bb17373",
+        image: "https://images.unsplash.com/photo-1586182984151-dc195d987adb", // Example Argentine asado
     },
     {
         name: "Brazil",
-        image: "https://images.unsplash.com/photo-1599742649579-9b5f0e417c90",
+        image: "https://images.unsplash.com/photo-1579004800959-73fc07d6c6ba", // Example Brazilian feijoada
     },
     {
         name: "Chile",
-        image: "https://images.unsplash.com/photo-1577293981711-e99e0f96092d",
+        image: "https://images.unsplash.com/photo-1598966873180-114b70304b2a", // Example Chilean empanadas
     },
     {
         name: "Cuba",
-        image: "https://images.unsplash.com/photo-1604131469513-c6a869ba8d69",
+        image: "https://images.unsplash.com/photo-1546554137-f86b9593a3c4", // Example Cuban sandwich
     },
     {
         name: "Jamaica",
-        image: "https://images.unsplash.com/photo-1591387979383-e8a1d5f2d3e2",
-    },
-    {
-        name: "Mexico",
-        image: "https://images.unsplash.com/photo-1625701629703-44f24f9e2f41",
+        image: "https://images.unsplash.com/photo-1558306183-bdff03d0e577", // Example Jamaican jerk chicken
     },
     {
         name: "United States",
-        image: "https://images.unsplash.com/photo-1570529946673-3ed3513bfc8b",
+        image: "https://images.unsplash.com/photo-1556911220-e15b30d9db9f", // Example American burger
     },
     {
         name: "Canada",
-        image: "https://images.unsplash.com/photo-1599140787016-1f2fc7e21bc3",
+        image: "https://images.unsplash.com/photo-1595535912634-c76cf6f8e3ed", // Example Canadian poutine
     },
     {
         name: "Morocco",
-        image: "https://images.unsplash.com/photo-1611153831460-5d848ae6efb3",
+        image: "https://images.unsplash.com/photo-1556228722-14359f6d367b", // Example Moroccan tagine
     },
 ];
 
