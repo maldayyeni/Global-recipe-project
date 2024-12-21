@@ -37,6 +37,16 @@ function App() {
         window.scrollTo(0, 0); // Fix scrolling issue
     };
 
+    const toggleGroceriesPage = () => {
+        setViewGroceries(!viewGroceries);
+        setViewShopping(false);
+    };
+
+    const toggleShoppingPage = () => {
+        setViewShopping(!viewShopping);
+        setViewGroceries(false);
+    };
+
     return (
         <div className="App">
             {viewShopping ? (
@@ -55,6 +65,22 @@ function App() {
             ) : (
                 <CountriesPage onSelectCountry={handleCountrySelect} />
             )}
+
+            <div className="navigation-buttons">
+                {!viewGroceries && !viewShopping && !selectedCountry && (
+                    <>
+                        <button onClick={toggleGroceriesPage} className="groceries-button">
+                            🍎 Enter Groceries
+                        </button>
+                        <button onClick={toggleShoppingPage} className="shopping-button" style={{ marginLeft: '10px' }}>
+                            🛒 Shopping Assistant
+                        </button>
+                    </>
+                )}
+                {(viewGroceries || viewShopping || selectedCountry) && (
+                    <button onClick={handleBack} style={{ marginLeft: '10px' }}>Back</button>
+                )}
+            </div>
         </div>
     );
 }

@@ -1,17 +1,29 @@
 import React from 'react';
-import './RecipeCard.css';
+import './RecipeDetails.css';
 
-function RecipeCard({ image, title, time, rating, onClick }) {
+function RecipeDetails({ recipe, onBack }) {
     return (
-        <div className="recipe-card" onClick={onClick}>
-            <img src={image} alt={title} className="recipe-image" />
-            <div className="recipe-info">
-                <h3 className="recipe-title">{title}</h3>
-                <p className="recipe-meta">Time: {time}</p>
-                <p className="recipe-meta">Rating: {rating}</p>
-            </div>
+        <div className="recipe-details">
+            <button className="back-button" onClick={onBack}>
+                ← Back
+            </button>
+            <h1>{recipe.name}</h1>
+            <img src={recipe.image} alt={recipe.name} className="recipe-image" />
+            <h2>Cooking Time: {recipe.time}</h2>
+            <h2>Ingredients</h2>
+            <ul>
+                {recipe.ingredients.map((ingredient, index) => (
+                    <li key={index}>{ingredient}</li>
+                ))}
+            </ul>
+            <h2>Instructions</h2>
+            <ol>
+                {recipe.instructions.map((step, index) => (
+                    <li key={index}>{step}</li>
+                ))}
+            </ol>
         </div>
     );
 }
 
-export default RecipeCard;
+export default RecipeDetails;

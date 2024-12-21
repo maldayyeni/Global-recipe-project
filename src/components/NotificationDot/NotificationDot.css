@@ -1,18 +1,13 @@
-/* src/components/NotificationDot/NotificationDot.css */
-
 .notification-container {
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 24px;
-    height: 24px;
+    position: relative;
+    display: inline-block;
 }
 
 .count-badge {
     position: absolute;
-    top: 0;
-    right: 0;
-    background-color: #ff4d4d; /* Bright red */
+    top: -5px;
+    right: -5px;
+    background-color: red;
     color: white;
     border-radius: 50%;
     width: 20px;
@@ -21,22 +16,23 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    font-weight: bold;
 }
 
 .reset-button {
     position: absolute;
-    top: -6px;
-    right: -6px;
-    background-color: #ff4d4d; /* Bright red */
+    top: -10px;
+    right: -10px;
+    background-color: red;
     color: white;
     border: none;
     border-radius: 50%;
     width: 16px;
     height: 16px;
     font-size: 12px;
-    cursor: pointer;
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
     padding: 0;
 }

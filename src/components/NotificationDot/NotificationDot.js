@@ -1,5 +1,3 @@
-// src/components/NotificationDot/NotificationDot.js
-
 import React from 'react';
 import './NotificationDot.css';
 
@@ -12,7 +10,7 @@ function NotificationDot({ count, onReset }) {
             <button
                 className="reset-button"
                 onClick={(e) => {
-                    e.stopPropagation(); // Prevent triggering the parent onClick
+                    e.stopPropagation(); // Prevent triggering parent onClick
                     onReset();
                 }}
             >
